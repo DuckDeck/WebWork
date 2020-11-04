@@ -8,9 +8,15 @@
 </head>
 
 <body>
-    <form method="POST" action="https://lovelive.ink:19996/upload/header" enctype="multipart/form-data">
+    <form method="POST" action="http://lovelive.ink:7110/upload/header" enctype="multipart/form-data">
         <input type="file" id = "file" name="upload-key"></input>
-        <input type="submit" value="submit" ></input>
+        <input type="submit" value="外网上传测试" ></input>
+
+    </form>
+<br>
+    <form method="POST" action="http://localhost:9090/upload/header" enctype="multipart/form-data">
+        <input type="file" id = "file" name="upload-key"></input>
+        <input type="submit" value="本地上传测试" ></input>
 
     </form>
 </body>
