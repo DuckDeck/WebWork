@@ -1,2 +1,6 @@
 *.log
 static/img
+static/video
+main
+latest_log
+*.out
