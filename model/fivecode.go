@@ -10,7 +10,7 @@ import (
 )
 
 type FiveCode struct {
-	gorm.Model
+	gorm.Model  `json:"-"`
 	Word        string
 	PinYin      string
 	FiveCode    string
@@ -20,7 +20,8 @@ type FiveCode struct {
 
 func GetCodes(letters []string) (codes []FiveCode, err error) {
 	var sql = fmt.Sprintf(`select id,word,pin_yin,five_code,img_code,img_keyboard from five_code where word in ('%s')`, strings.Join(letters, ","))
-	global.G_DB.Raw(sql).Find(&codes)
+	fmt.Println(sql)
+	global.G_DB.Raw(sql).Scan(&codes)
 	return
 }
 
