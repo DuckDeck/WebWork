@@ -1,3 +1,0 @@
-[GIN-VUE-ADMIN]2020/10/31 - 08:54:10.187 Y:/WebWork/initialize/tables.go:12 ▶ [DEBUG] register table success
-[GIN-VUE-ADMIN]2020/10/31 - 08:54:10.247 Y:/WebWork/initialize/router.go:20 ▶ [DEBUG] use middleware cors
-[GIN-VUE-ADMIN]2020/10/31 - 08:54:10.248 Y:/WebWork/initialize/router.go:25 ▶ [DEBUG] router register success
