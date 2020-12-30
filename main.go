@@ -8,8 +8,8 @@ import (
 )
 
 func main() {
-	demo.PointTest()
-	demo.FlagPara()
+	//testPointer()
+	testSlice()
 	return
 
 	initialize.Mysql()
@@ -17,4 +17,13 @@ func main() {
 	initialize.DBTables()
 
 	core.RunServer()
+}
+
+func testPointer() {
+	demo.PointTest()
+	demo.FlagPara()
+}
+
+func testSlice() {
+	demo.Slice1()
 }
