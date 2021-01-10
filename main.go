@@ -10,7 +10,8 @@ import (
 func main() {
 	//testPointer()
 	//testSlice()
-	demo.TestReflect()
+	//demo.TestReflect()
+	demo.TestChannel()
 	return
 
 	initialize.Mysql()
