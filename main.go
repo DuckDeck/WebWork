@@ -11,8 +11,8 @@ func main() {
 	//testPointer()
 	//testSlice()
 	//demo.TestReflect()
-	demo.TestChannel()
-	return
+	// demo.TestChannel()
+	// return
 
 	initialize.Mysql()
 	defer global.G_DB.Close()
