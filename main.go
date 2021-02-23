@@ -3,6 +3,7 @@ package main
 import (
 	"WebWork/core"
 	"WebWork/demo"
+	"WebWork/foundation"
 	"WebWork/global"
 	"WebWork/initialize"
 )
@@ -12,7 +13,8 @@ func main() {
 	//testSlice()
 	//demo.TestReflect()
 	// demo.TestChannel()
-	// return
+	foundation.NQueen()
+	return
 
 	initialize.Mysql()
 	defer global.G_DB.Close()
