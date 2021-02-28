@@ -13,9 +13,16 @@ func main() {
 	//testSlice()
 	//demo.TestReflect()
 	// demo.TestChannel()
-	foundation.NQueen()
+	nums := foundation.CreateNums(50, 200, 5)
+	foundation.PrintNum("_", nums)
+	foundation.BubbleSort(nums)
+	foundation.PrintNum("_", nums)
+
 	return
 
+}
+
+func runServer() {
 	initialize.Mysql()
 	defer global.G_DB.Close()
 	initialize.DBTables()
