@@ -13,10 +13,10 @@ func main() {
 	//testSlice()
 	//demo.TestReflect()
 	// demo.TestChannel()
-	nums := foundation.CreateNums(50, 200, 5)
-	foundation.PrintNum("_", nums)
-	foundation.BubbleSort(nums)
-	foundation.PrintNum("_", nums)
+	nums := foundation.CreateNums(50, 200, 10)
+	foundation.PrintNum("  ", nums)
+	foundation.ChooseSort(nums)
+	foundation.PrintNum("  ", nums)
 
 	return
 
