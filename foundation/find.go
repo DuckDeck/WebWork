@@ -31,9 +31,37 @@ func FindFirsetTarget(nums []int, target int) (index int) {
 			low = mid + 1
 		} else {
 			if mid == 0 || nums[mid-1] != target {
-				return mid
+				index = mid
+				return
+			} else {
+				high = mid - 1
 			}
 		}
+	}
+	return
+}
+
+//找出找后一个值等于给定值的元素
+func FindLastTarget(nums []int, target int) (index int) {
+	index = -1
+	low := 0
+	high := len(nums) - 1
+	for low < high {
+		mid := low + (high-low)/2
+		if nums[mid] > target {
+			high = mid - 1
+		} else if nums[mid] < target {
+			low = mid + 1
+		} else {
+			if mid == len(nums)-1 || nums[mid+1] != target {
+				index = mid
+				return
+			} else {
+				low = mid + 1
+			}
+
+		}
+
 	}
 	return
 }
