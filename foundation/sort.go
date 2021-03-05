@@ -20,6 +20,15 @@ func InsertSort(nums []int) {
 	}
 }
 
+//插入排序优化
+//可以记录上一次的数大小的插入的位置，如果比上一次更小就直接跳到上个数的前面，然后再比较，
+//但是问题是对于数组来说，需要把数向后一个一个挪动，所以可能只是少了比较次数,这样并不好
+//可以得已经插入的数组是已经排好序言的情况下现在来个二分查找
+
+func InsertSort1(nums []int) {
+
+}
+
 func ChooseSort(nums []int) {
 	length := len(nums)
 	if length <= 1 {

@@ -6,6 +6,7 @@ import (
 	"WebWork/foundation"
 	"WebWork/global"
 	"WebWork/initialize"
+	"fmt"
 )
 
 func main() {
@@ -14,10 +15,13 @@ func main() {
 	//demo.TestReflect()
 	// demo.TestChannel()
 	nums := foundation.CreateNums(50, 200, 10)
+	nums = append(nums, 111)
 	foundation.PrintNum("  ", nums)
 	foundation.ChooseSort(nums)
 	foundation.PrintNum("  ", nums)
 
+	index := foundation.BiranySearch(nums, 111)
+	fmt.Print(index)
 	return
 
 }
