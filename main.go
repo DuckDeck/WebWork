@@ -6,6 +6,7 @@ import (
 	"WebWork/foundation"
 	"WebWork/global"
 	"WebWork/initialize"
+	"fmt"
 )
 
 func main() {
@@ -22,8 +23,10 @@ func main() {
 	//index := foundation.BiranySearch(nums, 111)
 	// fmt.Print(index)
 
-	foundation.TestFrog()
+	//foundation.TestFrog()
 
+	isMirrorTree := foundation.TestMirrorTree()
+	fmt.Printf("isMirrorTree: %t \n", isMirrorTree)
 	return
 
 }
