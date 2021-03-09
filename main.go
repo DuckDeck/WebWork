@@ -28,7 +28,9 @@ func main() {
 	isMirrorTree := foundation.TestMirrorTree()
 	fmt.Printf("isMirrorTree: %t \n", isMirrorTree)
 
-	fmt.Printf("以内的丑数据%d \n ", foundation.FindUglyNum(2000))
+	// fmt.Printf("以内的丑数据%d \n ", foundation.FindUglyNum(2000))
+
+	foundation.TestTwoDimensionArrayFind()
 
 	return
 
