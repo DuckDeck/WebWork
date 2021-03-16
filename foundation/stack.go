@@ -94,3 +94,4 @@ func addBefore(e *entry, element Element) Element {
 //出队列很简单，直接判断S2是不是空，如果不是空就弱出，是空的话就奖S1的全部数据倒入S2，再将顶部数据弱出
 
 //代码...
+//这个比较麻烦
