@@ -25,6 +25,8 @@ func main() {
 
 	//foundation.TestFrog()
 
+	foundation.TestFindRepeatNum()
+
 	isMirrorTree := foundation.TestMirrorTree()
 	fmt.Printf("isMirrorTree: %t \n", isMirrorTree)
 

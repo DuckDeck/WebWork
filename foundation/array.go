@@ -1,6 +1,8 @@
 package foundation
 
-import "fmt"
+import (
+	"fmt"
+)
 
 //在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。
 //请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。
@@ -57,4 +59,76 @@ func TestTwoDimensionArrayFind() {
 
 	TwoDimensionArrayFind(arr, 31)
 
+}
+
+//一个整型数组里除了两个数字之外，其他的数字都出现了两次。请写程序找出这两个只出现一次的数字
+//比如这样的 2,4,5,5,4,6,7,1,19,2,6,7
+//我的思路是用一个hash表，出现同一个数就删除，循环完后里面的两个数就是只出现一次的数
+//网上的思路是如果两个数相同，那么两个数字异或就为0,所以可以一直向后面异或过去，最后出现的值就是两个数的异或值
+func findOneRepeatNum(array []int) []int {
+	if len(array) <= 0 {
+		return nil
+	}
+
+	tmp := array[0]
+	for _, item := range array {
+		if item == tmp {
+			continue
+		}
+		tmp = tmp ^ item
+	}
+	count := 0
+	for tmp%2 == 0 {
+		tmp = tmp >> 1
+		count += 1
+	}
+	mask := 1 << count
+	var firstNum = -1
+	var secondNum = -1
+	for _, item := range array {
+		if mask&item == 0 {
+			if firstNum == -1 {
+				firstNum = item
+			} else {
+				firstNum = firstNum ^ item
+			}
+
+		} else {
+			if secondNum == -1 {
+				secondNum = item
+			} else {
+				secondNum = secondNum ^ item
+			}
+		}
+	}
+	return []int{firstNum, secondNum}
+}
+
+//第二种方式用hash表
+func findOneRepeatNum1(array []int) []int {
+	if len(array) <= 0 {
+		return nil
+	}
+	res := []int{}
+	tmp := make(map[int]bool)
+	for _, item := range array {
+		if _, ok := tmp[item]; ok {
+			delete(tmp, item)
+		} else {
+			tmp[item] = true
+		}
+	}
+	for item := range tmp {
+		res = append(res, item)
+	}
+	return res
+}
+
+//两个方法都行
+func TestFindRepeatNum() {
+	nums := []int{2, 4, 5, 5, 4, 6, 7, 19, 3, 2, 6, 7}
+	res := findOneRepeatNum(nums)
+	for _, item := range res {
+		fmt.Printf("%d\n", item)
+	}
 }
