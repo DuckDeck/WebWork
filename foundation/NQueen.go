@@ -8,7 +8,6 @@ var n int
 func NQueen() {
 
 	fmt.Print("Please input the Number N for the queen\n")
-	//fmt.Scanln(&n)
 	if n == 0 {
 		n = 2
 	}
