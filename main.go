@@ -3,10 +3,8 @@ package main
 import (
 	"WebWork/core"
 	"WebWork/demo"
-	"WebWork/foundation"
 	"WebWork/global"
 	"WebWork/initialize"
-	"fmt"
 )
 
 func main() {
@@ -25,15 +23,16 @@ func main() {
 
 	//foundation.TestFrog()
 
-	foundation.TestFindRepeatNum()
+	// foundation.TestFindRepeatNum()
 
-	isMirrorTree := foundation.TestMirrorTree()
-	fmt.Printf("isMirrorTree: %t \n", isMirrorTree)
+	// isMirrorTree := foundation.TestMirrorTree()
+	// fmt.Printf("isMirrorTree: %t \n", isMirrorTree)
 
 	// fmt.Printf("以内的丑数据%d \n ", foundation.FindUglyNum(2000))
 
-	foundation.TestTwoDimensionArrayFind()
+	//foundation.TestTwoDimensionArrayFind()
 
+	runServer()
 	return
 
 }

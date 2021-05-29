@@ -1,3 +1,1 @@
-[GIN-VUE-ADMIN]2021/03/01 - 08:14:49.402 /mnt/user/git/WebWork/initialize/tables.go:12 ▶ [DEBUG] register table success
-[GIN-VUE-ADMIN]2021/03/01 - 08:14:49.407 /mnt/user/git/WebWork/initialize/router.go:20 ▶ [DEBUG] use middleware cors
-[GIN-VUE-ADMIN]2021/03/01 - 08:14:49.408 /mnt/user/git/WebWork/initialize/router.go:25 ▶ [DEBUG] router register success
+log/2021-05-29-08-00.log
