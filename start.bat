@@ -1,21 +1,18 @@
 @echo off
 set AppName=main.exe
 set AppPath=D:\Project\WebWork\
-title ½ø³Ì¼à¿Ø
+title è¿›ç¨‹ç›‘æŽ§
 cls
 echo.
-echo ½ø³Ì¼à¿Ø¿ªÊ¼¡­¡­
+echo è¿›ç¨‹ç›‘æŽ§å¼€å§‹â€¦â€¦
 echo.
 :startjc
 qprocess %AppName% > nul
 if %errorlevel% equ 0 (
-rem echo ^>%date:~0,10% %time:~0,8% running¡­¡­
+rem echo ^>%date:~0,10% %time:~0,8% runningâ€¦â€¦
 )else (
 start %AppPath%%AppName% 2>nul && echo ^>%date:~0,10% %time:~0,8% start,success!
 )
 for /l %%i in (1,1,1) do ping -n 2 -w 100 127.0.0.1>nul
 goto startjc
 echo on
-¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
-°æÈ¨ÉùÃ÷£º±¾ÎÄÎªCSDN²©Ö÷¡¸Asciphx¡¹µÄÔ­´´ÎÄÕÂ£¬×ñÑ­CC 4.0 BY-SA°æÈ¨Ð­Òé£¬×ªÔØÇë¸½ÉÏÔ­ÎÄ³ö´¦Á´½Ó¼°±¾ÉùÃ÷¡£
-Ô­ÎÄÁ´½Ó£ºhttps://blog.csdn.net/qq_33359662/article/details/86321027
