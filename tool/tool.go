@@ -78,3 +78,11 @@ func GetCurrentPath() string {
 	}
 	return strings.Replace(dir, "\\", "/", -1)
 }
+
+func CheckFileIsExist(filename string) bool {
+	var exist = true
+	if _, err := os.Stat(filename); os.IsNotExist(err) {
+		exist = false
+	}
+	return exist
+}
