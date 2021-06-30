@@ -71,7 +71,7 @@ func getBaidu(imgCovers []string) {
 			index := strings.Index(txt, "链接：")
 			index2 := strings.Index(txt, "提取码：")
 			link := txt[index:index2]
-			code := txt[index2+4 : len(txt)]
+			code := txt[index2+4:]
 			fmt.Println(link)
 			writeBaiduLink(link, code)
 		}
