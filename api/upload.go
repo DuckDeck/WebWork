@@ -29,7 +29,8 @@ func Upload(c *gin.Context) {
 
 	} else {
 		var data = make(map[string]string, 1)
-		data["data"] = "http://lovelive.ink:7113/img/" + dst
+		data["src"] = "http://lovelive.ink:9000/file/" + dst
+		data["local"] = "http://localhost:9090/file/" + dst
 		var res = model.Result{Code: 0, Count: 0, Msg: "success", Data: data}
 		c.JSON(http.StatusOK, res)
 	}

@@ -1,0 +1,1 @@
+docker run -p  9090:9090 -v /mnt/user/Share/web:/dist/static webwork

@@ -34,7 +34,7 @@ func main() {
 
 	//Xiuren()
 
-	//runServer()
+	runServer()
 
 	return
 

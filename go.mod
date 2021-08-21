@@ -1,6 +1,6 @@
 module WebWork
 
-go 1.14
+go 1.16
 
 require (
 	9fans.net/go v0.0.2 // indirect

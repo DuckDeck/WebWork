@@ -17,11 +17,13 @@ func Routers() *gin.Engine {
 
 	Router.Use(middleware.Cors())
 	Router.StaticFS("/file", http.Dir("./static/img"))
+	Router.LoadHTMLGlob("./upload.html")
 	global.G_LOG.Debug("use middleware cors")
 	ApiGroup := Router.Group("")
 	uploadRouter(ApiGroup)
 	fiveRouter(ApiGroup)
 	mitoRouter(ApiGroup)
+	htmlRouter(ApiGroup)
 	global.G_LOG.Debug("router register success")
 	return Router
 }
@@ -39,6 +41,14 @@ func fiveRouter(Router *gin.RouterGroup) {
 	Router.GET("/five/:key", api.GetFive)
 }
 
+func htmlRouter(Router *gin.RouterGroup) {
+	Router.GET("/html/upload", loadHTML)
+}
+
 func mitoRouter(Router *gin.RouterGroup) {
 	Router.GET("/mito/:path/:index", api.SaveMito)
+}
+
+func loadHTML(c *gin.Context) {
+	c.HTML(http.StatusOK, "upload.html", nil)
 }
