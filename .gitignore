@@ -6,3 +6,4 @@ latest_log
 *.out
 main.exe
 vendor
+*.DS_Store
