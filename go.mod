@@ -1,50 +1,52 @@
 module WebWork
 
-go 1.16
+go 1.18
 
 require (
-	9fans.net/go v0.0.2 // indirect
 	github.com/PuerkitoBio/goquery v1.6.0
-	github.com/acroca/go-symbols v0.1.1 // indirect
-	github.com/bitly/go-simplejson v0.5.0
-	github.com/davidrjenni/reftools v0.0.0-20191222082827-65925cf01315 // indirect
-	github.com/fatih/gomodifytags v1.6.0 // indirect
 	github.com/fsnotify/fsnotify v1.4.9
 	github.com/gin-gonic/gin v1.6.3
-	github.com/go-delve/delve v1.4.1 // indirect
 	github.com/go-sql-driver/mysql v1.5.0
-	github.com/godoctor/godoctor v0.0.0-20181123222458-69df17f3a6f6 // indirect
-	github.com/gofrs/uuid v3.2.0+incompatible
-	github.com/haya14busa/goplay v1.0.0 // indirect
 	github.com/jinzhu/gorm v1.9.16
-	github.com/jmoiron/sqlx v1.2.0 // indirect
-	github.com/josharian/impl v1.0.0 // indirect
-	github.com/julienschmidt/httprouter v1.3.0
 	github.com/lestrrat/go-file-rotatelogs v0.0.0-20180223000712-d3151e2a480f
-	github.com/lestrrat/go-strftime v0.0.0-20180220042222-ba3bf9c1d042 // indirect
-	github.com/lukehoban/go-find-references v0.0.0-20150918174914-42505ef666d1 // indirect
-	github.com/lukehoban/go-outline v0.0.0-20161011150102-e78556874252 // indirect
-	github.com/lukehoban/ident v0.0.0-20161021214352-ec6acfba39eb // indirect
-	github.com/mattn/go-sqlite3 v2.0.1+incompatible // indirect
-	github.com/mdempsky/gocode v0.0.0-20200405233807-4acdcbdea79d // indirect
-	github.com/newhook/go-symbols v0.0.0-20151212134530-b75dfefa0d23 // indirect
-	github.com/nsf/gocode v0.0.0-20190302080247-5bee97b48836 // indirect
 	github.com/op/go-logging v0.0.0-20160315200505-970db520ece7
-	github.com/ramya-rao-a/go-outline v0.0.0-20200117021646-2a048b4510eb // indirect
-	github.com/rogpeppe/godef v1.1.2 // indirect
-	github.com/satori/go.uuid v1.2.0
-	github.com/skratchdot/open-golang v0.0.0-20200116055534-eef842397966 // indirect
 	github.com/spf13/viper v1.6.3
-	github.com/sqs/goreturns v0.0.0-20181028201513-538ac6014518 // indirect
-	github.com/stamblerre/gocode v1.0.0 // indirect
-	github.com/tpng/gopkgs v0.0.0-20180428091733-81e90e22e204 // indirect
-	github.com/uudashr/gopkgs/v2 v2.1.2 // indirect
-	github.com/willf/bitset v1.1.10 // indirect
-	golang.org/x/lint v0.0.0-20200302205851-738671d3881b // indirect
-	golang.org/x/mod v0.3.0 // indirect
 	golang.org/x/text v0.3.4
-	golang.org/x/tools v0.0.0-20201028111035-eafbe7b904eb // indirect
-	golang.org/x/tools/gopls v0.4.1 // indirect
-	google.golang.org/appengine v1.4.0 // indirect
-	sourcegraph.com/sqs/goreturns v0.0.0-20181028201513-538ac6014518 // indirect
+)
+
+require (
+	github.com/andybalholm/cascadia v1.1.0 // indirect
+	github.com/fastly/go-utils v0.0.0-20180712184237-d95a45783239 // indirect
+	github.com/gin-contrib/sse v0.1.0 // indirect
+	github.com/go-playground/locales v0.13.0 // indirect
+	github.com/go-playground/universal-translator v0.17.0 // indirect
+	github.com/go-playground/validator/v10 v10.2.0 // indirect
+	github.com/golang/protobuf v1.3.3 // indirect
+	github.com/hashicorp/hcl v1.0.0 // indirect
+	github.com/jehiah/go-strftime v0.0.0-20171201141054-1d33003b3869 // indirect
+	github.com/jinzhu/inflection v1.0.0 // indirect
+	github.com/json-iterator/go v1.1.9 // indirect
+	github.com/leodido/go-urn v1.2.0 // indirect
+	github.com/lestrrat/go-envload v0.0.0-20180220120943-6ed08b54a570 // indirect
+	github.com/lestrrat/go-strftime v0.0.0-20180220042222-ba3bf9c1d042 // indirect
+	github.com/magiconair/properties v1.8.1 // indirect
+	github.com/mattn/go-isatty v0.0.12 // indirect
+	github.com/mattn/go-sqlite3 v2.0.1+incompatible // indirect
+	github.com/mitchellh/mapstructure v1.1.2 // indirect
+	github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421 // indirect
+	github.com/modern-go/reflect2 v1.0.1 // indirect
+	github.com/pelletier/go-toml v1.2.0 // indirect
+	github.com/pkg/errors v0.8.1 // indirect
+	github.com/spf13/afero v1.1.2 // indirect
+	github.com/spf13/cast v1.3.0 // indirect
+	github.com/spf13/jwalterweatherman v1.0.0 // indirect
+	github.com/spf13/pflag v1.0.3 // indirect
+	github.com/subosito/gotenv v1.2.0 // indirect
+	github.com/tebeka/strftime v0.1.5 // indirect
+	github.com/ugorji/go/codec v1.1.7 // indirect
+	golang.org/x/net v0.0.0-20201021035429-f5854403a974 // indirect
+	golang.org/x/sys v0.0.0-20220919091848-fb04ddd9f9c8 // indirect
+	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
+	gopkg.in/ini.v1 v1.51.0 // indirect
+	gopkg.in/yaml.v2 v2.2.8 // indirect
 )
