@@ -1,7 +1,7 @@
 mysql:
     username: test
     password: 'stanhu520'
-    path: 'lovelive.ink:9011'
+    path: 'stanhu.cc:9120'
     db-name: 'webwork'
     config: 'charset=utf8&parseTime=True&loc=Local'
     max-idle-conns: 10
