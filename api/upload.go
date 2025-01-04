@@ -1,12 +1,12 @@
 package api
 
 import (
+	"WebWork/model"
 	"fmt"
 	"net/http"
+	"path"
 	"strconv"
 	"time"
-
-	"WebWork/model"
 
 	"github.com/gin-gonic/gin"
 )
@@ -19,8 +19,8 @@ func Upload(c *gin.Context) {
 		c.JSON(http.StatusOK, res)
 		return
 	}
-
-	dst := strconv.FormatInt(time.Now().Unix(), 10) + header.Filename
+	ext := path.Ext(header.Filename)
+	dst := "img_" + strconv.FormatInt(time.Now().Unix(), 10) + ext
 	// gin 简单做了封装,拷贝了文件流
 	if err := c.SaveUploadedFile(header, "static/img/"+dst); err != nil {
 		fmt.Println(err)
