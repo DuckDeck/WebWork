@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<body>
+    <form method="POST" action="http://stanhu.cc:9070/upload/header" enctype="multipart/form-data">
+        <input type="file" id = "file" name="pictures[]" value="选择图片" multiple ></input>
+        <input type="submit" value="开始上传" ></input>
+
+    </form>
+<br>
+<label><input type="checkbox" id="actionSwitch">勾选使用本地地址</label> <!-- 模拟switch的复选框 -->
+</body>
+<script>
+    $(document).ready(function(){
+        var form = $('form');
+        var checkbox = $("#actionSwitch")
+        if(checkbox.is(':checked')){
+            form.attr('action', 'http://localhost:9090/upload/header');
+        } else {
+            form.attr('action', 'http://stanhu.cc:9070/upload/header');
+        }
+        checkbox.change(function(){
+            if (checkbox.is(':checked')) {
+                 form.attr('action', 'http://localhost:9090/upload/header');
+            } else {
+                form.attr('action', 'http://stanhu.cc:9070/upload/header');
+            }
+        })
+        
+    })
+</script>
+</html>
