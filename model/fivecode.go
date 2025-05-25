@@ -2,7 +2,7 @@ package model
 
 import (
 	"fmt"
-	"strings"
+
 
 	"WebWork/global"
 
@@ -11,17 +11,16 @@ import (
 
 type FiveCode struct {
 	gorm.Model  `json:"-"`
-	Word        string
-	PinYin      string
-	FiveCode    string
-	ImgCode     string
-	ImgKeyboard string
+	Zi       string `json:"word"`
+	Py      string `json:"spell"`
+	Wubi    string	`json:"code"`
+}
+func (FiveCode) TableName() string {
+    return "xhzd_surnfu" // 替换为实际表名
 }
 
 func GetCodes(letters []string) (codes []FiveCode, err error) {
-	var sql = fmt.Sprintf(`select id,word,pin_yin,five_code,img_code,img_keyboard from five_code where word in ('%s')`, strings.Join(letters, ","))
-	fmt.Println(sql)
-	global.G_DB.Raw(sql).Scan(&codes)
+	global.G_DB.Where(`zi IN (?)`,letters).Find(&codes)
 	return
 }
 
